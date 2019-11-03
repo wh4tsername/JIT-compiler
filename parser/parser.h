@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-namespace parser {
+namespace JIT_COMPILER::parser {
 enum struct Operation {
   PLUS = '+',
   MINUS = '-',
@@ -35,7 +35,7 @@ struct Token {
 
 class Parser {
  public:
-  std::vector<Token> operator()(const std::string& expression);
+  std::vector<Token> Parse(const std::string& expression);
 
  private:
   size_t GetOperationPriority(const Operation& operation);
@@ -48,4 +48,4 @@ class Parser {
   std::vector<Token> tokens_;
   std::vector<Token> postfix_notation_;
 };
-}
+}  // namespace JIT_COMPILER::parser

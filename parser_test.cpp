@@ -3,21 +3,21 @@
 #include "parser/parser.h"
 
 int main() {
-  parser::Parser parser;
+  JIT_COMPILER::parser::Parser parser;
 
   std::string expr;
   std::getline(std::cin, expr);
-  std::vector<parser::Token> tokens = parser(expr);
-  for (auto&& tok : tokens) {
-    if (tok.type_ == parser::Token::FUNCTION) {
-      std::cout << "(" << tok.function_.name_ << ","
-                << tok.function_.number_of_arguments_ << ")";
-    } else if (tok.type_ == parser::Token::VARIABLE) {
-      std::cout << tok.variable_.name_;
-    } else if (tok.type_ == parser::Token::NUMBER) {
-      std::cout << tok.number_;
-    } else if (tok.type_ == parser::Token::OPERATION) {
-      std::cout << static_cast<char>(tok.operation_);
+  std::vector<JIT_COMPILER::parser::Token> tokens = parser.Parse(expr);
+  for (auto&& token : tokens) {
+    if (token.type_ == JIT_COMPILER::parser::Token::FUNCTION) {
+      std::cout << "(" << token.function_.name_ << ","
+                << token.function_.number_of_arguments_ << ")";
+    } else if (token.type_ == JIT_COMPILER::parser::Token::VARIABLE) {
+      std::cout << token.variable_.name_;
+    } else if (token.type_ == JIT_COMPILER::parser::Token::NUMBER) {
+      std::cout << token.number_;
+    } else if (token.type_ == JIT_COMPILER::parser::Token::OPERATION) {
+      std::cout << static_cast<char>(token.operation_);
     }
     std::cout << " ";
   }

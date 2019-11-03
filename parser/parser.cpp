@@ -1,6 +1,6 @@
 #include "parser.h"
 
-std::vector<parser::Token> parser::Parser::operator()(
+std::vector<JIT_COMPILER::parser::Token> JIT_COMPILER::parser::Parser::Parse(
     const std::string& expression) {
   expression_ = expression;
   Split();
@@ -9,7 +9,7 @@ std::vector<parser::Token> parser::Parser::operator()(
   return postfix_notation_;
 }
 
-size_t parser::Parser::GetOperationPriority(
+size_t JIT_COMPILER::parser::Parser::GetOperationPriority(
     const parser::Operation& operation) {
   switch (operation) {
     case Operation::OPEN_BRACKET:
@@ -34,7 +34,7 @@ size_t parser::Parser::GetOperationPriority(
   }
 }
 
-void parser::Parser::Split() {
+void JIT_COMPILER::parser::Parser::Split() {
   for (size_t i = 0; i < expression_.size();) {
     if (isspace(expression_[i])) {
       ++i;
@@ -82,9 +82,7 @@ void parser::Parser::Split() {
           }
           ++j;
         }
-        if (j - i > 2) {
-          ++number_of_arguments;
-        }
+        ++number_of_arguments;
 
         Token token;
         token.type_ = Token::FUNCTION;
@@ -102,7 +100,7 @@ void parser::Parser::Split() {
   }
 }
 
-void parser::Parser::GetPostfixNotation() {
+void JIT_COMPILER::parser::Parser::GetPostfixNotation() {
   std::stack<Token> operators;
 
   bool is_next_token_operand = true;
