@@ -6,30 +6,21 @@
 
 namespace JIT_COMPILER::parser {
 enum struct Operation {
-  PLUS = '+',
-  MINUS = '-',
+  ADD = '+',
+  SUBSTRACT = '-',
   MULTIPLY = '*',
-  UNARY_MINUS = '~',
   OPEN_BRACKET = '(',
   CLOSE_BRACKET = ')',
-  COMMA = ','
-};
-
-struct Variable {
-  std::string name_;
-};
-
-struct Function {
-  std::string name_;
-  size_t number_of_arguments_;
+  COMMA = ',',
+  UNARY_MINUS = '~'
 };
 
 struct Token {
   enum Type { VARIABLE, FUNCTION, NUMBER, OPERATION } type_;
 
   Operation operation_;
-  Variable variable_;
-  Function function_;
+  std::string name_;
+  size_t number_of_arguments_;
   int32_t number_;
 };
 

@@ -1,7 +1,5 @@
 #include "arm_compiler.h"
 
-#include <iostream>
-
 extern "C" void jit_compile_expression_to_arm(const char* expression,
                                               const symbol_t* externs,
                                               void* out_buffer) {
@@ -16,8 +14,8 @@ extern "C" void jit_compile_expression_to_arm(const char* expression,
 void JIT_COMPILER::jit_compiler::JitCompiler::Compile(
     const std::vector<JIT_COMPILER::parser::Token>& tokens,
     const symbol_t* externs, void* out_buffer) {
-  while (externs->name != nullptr && externs->pointer != nullptr) {
-    externs_[externs->name] = externs->pointer;
+  while (externs->name_ != nullptr && externs->pointer_ != nullptr) {
+    externs_[externs->name_] = externs->pointer_;
     ++externs;
   }
 
@@ -30,63 +28,60 @@ void JIT_COMPILER::jit_compiler::JitCompiler::Compile(
   }
 }
 
-void JIT_COMPILER::jit_compiler::JitCompiler::MoveConstant(size_t reg,
-                                                           uint32_t constant) {
-  instructions_.emplace_back(MOVW[reg] |
+void JIT_COMPILER::jit_compiler::JitCompiler::MoveConstant(uint32_t constant) {
+  instructions_.emplace_back(MOVW_R0 |
                              ((((constant & ((1 << 16) - 1)) >> 12) << 16) |
                               (constant & ((1 << 16) - 1) & ((1 << 12) - 1))));
-  instructions_.emplace_back(
-      MOVT[reg] |
-      (((constant >> 28) << 16) | ((constant >> 16) & ((1 << 12) - 1))));
+  instructions_.emplace_back(MOVT_R0 | (((constant >> 28) << 16) |
+                                        ((constant >> 16) & ((1 << 12) - 1))));
+}
+
+void JIT_COMPILER::jit_compiler::JitCompiler::MoveAddress(uint32_t constant) {
+  instructions_.emplace_back(MOVW_R4 |
+                             ((((constant & ((1 << 16) - 1)) >> 12) << 16) |
+                              (constant & ((1 << 16) - 1) & ((1 << 12) - 1))));
+  instructions_.emplace_back(MOVT_R4 | (((constant >> 28) << 16) |
+                                        ((constant >> 16) & ((1 << 12) - 1))));
 }
 
 void JIT_COMPILER::jit_compiler::JitCompiler::LoadVariable(
-    size_t reg, void* pointer_of_variable) {
-  MoveConstant(reg, reinterpret_cast<uint32_t>(pointer_of_variable));
-  instructions_.emplace_back(LDR[reg]);
-}
-
-void JIT_COMPILER::jit_compiler::JitCompiler::CallFunction(
-    void* function_pointer) {
-  MoveConstant(4, reinterpret_cast<uint32_t>(function_pointer));
-  instructions_.emplace_back(BLX_R4);
+    void* pointer_of_variable) {
+  MoveConstant(reinterpret_cast<uint32_t>(pointer_of_variable));
+  instructions_.emplace_back(LDR_R0_R0);
 }
 
 void JIT_COMPILER::jit_compiler::JitCompiler::CallFunction(
     void* function_pointer, size_t number_of_arguments) {
   for (size_t i = number_of_arguments; i > 0; --i) {
-    instructions_.emplace_back(POP[i - 1]);
+    instructions_.emplace_back(POP_TO[i - 1]);
   }
-  CallFunction(function_pointer);
+
+  MoveAddress(reinterpret_cast<uint32_t>(function_pointer));
+  instructions_.emplace_back(BLX_R4);
 
   instructions_.emplace_back(PUSH_R0);
 }
 
-void JIT_COMPILER::jit_compiler::JitCompiler::CompleteBinaryOperation(
+void JIT_COMPILER::jit_compiler::JitCompiler::ExecuteOperation(
     const parser::Operation& operation) {
-  instructions_.emplace_back(POP[1]);
-  instructions_.emplace_back(POP[0]);
+  if (operation == JIT_COMPILER::parser::Operation::UNARY_MINUS) {
+    instructions_.emplace_back(POP_TO[1]);
+    instructions_.emplace_back(NEG_R0_R1);
+    instructions_.emplace_back(PUSH_R0);
+    return;
+  }
+  instructions_.emplace_back(POP_TO[1]);
 
-  switch (operation) {
-    case parser::Operation::PLUS:
-      instructions_.emplace_back(ADD_R0_R1);
-      break;
+  instructions_.emplace_back(POP_TO[0]);
 
-    case parser::Operation::MINUS:
-      instructions_.emplace_back(SUB_R0_R1);
-      break;
-
-    case parser::Operation::MULTIPLY:
-      instructions_.emplace_back(MUL_R0_R1);
-      break;
+  if (operation == parser::Operation::ADD) {
+    instructions_.emplace_back(ADD_R0_R1);
+  } else if (operation == parser::Operation::SUBSTRACT) {
+    instructions_.emplace_back(SUB_R0_R1);
+  } else if (operation == parser::Operation::MULTIPLY) {
+    instructions_.emplace_back(MUL_R0_R1);
   }
 
-  instructions_.emplace_back(PUSH_R0);
-}
-
-void JIT_COMPILER::jit_compiler::JitCompiler::CompleteUnaryMinus() {
-  instructions_.emplace_back(POP[1]);
-  instructions_.emplace_back(NEG_R0_R1);
   instructions_.emplace_back(PUSH_R0);
 }
 
@@ -96,23 +91,19 @@ std::vector<uint32_t> JIT_COMPILER::jit_compiler::JitCompiler::GetInstructions(
 
   for (auto&& token : tokens) {
     if (token.type_ == JIT_COMPILER::parser::Token::NUMBER) {
-      MoveConstant(0, token.number_);
+      MoveConstant(token.number_);
       instructions_.emplace_back(PUSH_R0);
     } else if (token.type_ == JIT_COMPILER::parser::Token::VARIABLE) {
-      LoadVariable(0, externs_[token.variable_.name_]);
+      LoadVariable(externs_[token.name_]);
       instructions_.emplace_back(PUSH_R0);
     } else if (token.type_ == JIT_COMPILER::parser::Token::FUNCTION) {
-      CallFunction(externs_[token.function_.name_],
-                   token.function_.number_of_arguments_);
-    } else if (token.operation_ ==
-               JIT_COMPILER::parser::Operation::UNARY_MINUS) {
-      CompleteUnaryMinus();
+      CallFunction(externs_[token.name_], token.number_of_arguments_);
     } else {
-      CompleteBinaryOperation(token.operation_);
+      ExecuteOperation(token.operation_);
     }
   }
 
-  instructions_.emplace_back(POP[0]);
+  instructions_.emplace_back(POP_TO[0]);
   instructions_.emplace_back(POP_R4_PC);
 
   return instructions_;

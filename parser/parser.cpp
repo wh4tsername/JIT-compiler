@@ -11,27 +11,22 @@ std::vector<JIT_COMPILER::parser::Token> JIT_COMPILER::parser::Parser::Parse(
 
 size_t JIT_COMPILER::parser::Parser::GetOperationPriority(
     const parser::Operation& operation) {
-  switch (operation) {
-    case Operation::OPEN_BRACKET:
-      return 0;
-
-    case Operation::CLOSE_BRACKET:
-    case Operation::COMMA:
-      return 1;
-
-    case Operation::PLUS:
-    case Operation::MINUS:
-      return 2;
-
-    case Operation::MULTIPLY:
-      return 3;
-
-    case Operation::UNARY_MINUS:
-      return 4;
-
-    default:
-      return 5;
+  if (operation == Operation::OPEN_BRACKET) {
+    return 0;
   }
+  if (operation == Operation::CLOSE_BRACKET || operation == Operation::COMMA) {
+    return 1;
+  }
+  if (operation == Operation::ADD || operation == Operation::SUBSTRACT) {
+    return 2;
+  }
+  if (operation == Operation::MULTIPLY) {
+    return 3;
+  }
+  if (operation == Operation::UNARY_MINUS) {
+    return 4;
+  }
+  return 5;
 }
 
 void JIT_COMPILER::parser::Parser::Split() {
@@ -41,18 +36,7 @@ void JIT_COMPILER::parser::Parser::Split() {
       continue;
     }
 
-    if (isdigit(expression_[i])) {
-      std::string number_string;
-      while (i < expression_.size() && isdigit(expression_[i])) {
-        number_string.push_back(expression_[i]);
-        ++i;
-      }
-
-      Token token;
-      token.type_ = Token::NUMBER;
-      token.number_ = std::strtol(number_string.c_str(), nullptr, 10);
-      tokens_.emplace_back(token);
-    } else if (isalpha(expression_[i])) {
+    if (isalpha(expression_[i])) {
       std::string name;
       while (i < expression_.size() &&
              (isalpha(expression_[i]) || isdigit(expression_[i]))) {
@@ -60,13 +44,8 @@ void JIT_COMPILER::parser::Parser::Split() {
         ++i;
       }
 
-      if (i >= expression_.size() ||
-          expression_[i] != static_cast<char>(Operation::OPEN_BRACKET)) {
-        Token token;
-        token.type_ = Token::VARIABLE;
-        token.variable_.name_ = name;
-        tokens_.emplace_back(token);
-      } else {
+      if (i < expression_.size() &&
+          expression_[i] == static_cast<char>(Operation::OPEN_BRACKET)) {
         size_t j = i + 1;
         size_t bracket_balance = 1;
         size_t number_of_arguments = 0;
@@ -86,10 +65,26 @@ void JIT_COMPILER::parser::Parser::Split() {
 
         Token token;
         token.type_ = Token::FUNCTION;
-        token.function_.name_ = name;
-        token.function_.number_of_arguments_ = number_of_arguments;
+        token.name_ = name;
+        token.number_of_arguments_ = number_of_arguments;
+        tokens_.emplace_back(token);
+      } else {
+        Token token;
+        token.type_ = Token::VARIABLE;
+        token.name_ = name;
         tokens_.emplace_back(token);
       }
+    } else if (isdigit(expression_[i])) {
+      std::string number_string;
+      while (i < expression_.size() && isdigit(expression_[i])) {
+        number_string.push_back(expression_[i]);
+        ++i;
+      }
+
+      Token token;
+      token.type_ = Token::NUMBER;
+      token.number_ = std::strtol(number_string.c_str(), nullptr, 10);
+      tokens_.emplace_back(token);
     } else {
       Token token;
       token.type_ = Token::OPERATION;
@@ -107,7 +102,7 @@ void JIT_COMPILER::parser::Parser::GetPostfixNotation() {
   for (auto&& token : tokens_) {
     if (is_next_token_operand) {
       if (token.type_ == Token::OPERATION) {
-        if (token.operation_ == Operation::MINUS) {
+        if (token.operation_ == Operation::SUBSTRACT) {
           token.operation_ = Operation::UNARY_MINUS;
         }
         operators.push(token);
@@ -123,13 +118,13 @@ void JIT_COMPILER::parser::Parser::GetPostfixNotation() {
             GetOperationPriority(token.operation_)) {
           break;
         }
-        postfix_notation_.push_back(operators.top());
+        postfix_notation_.emplace_back(operators.top());
         operators.pop();
       }
       if (token.operation_ == Operation::CLOSE_BRACKET) {
         operators.pop();
         if (!operators.empty() && operators.top().type_ == Token::FUNCTION) {
-          postfix_notation_.push_back(operators.top());
+          postfix_notation_.emplace_back(operators.top());
           operators.pop();
         }
         continue;
@@ -145,7 +140,7 @@ void JIT_COMPILER::parser::Parser::GetPostfixNotation() {
         GetOperationPriority(Operation::CLOSE_BRACKET)) {
       break;
     }
-    postfix_notation_.push_back(operators.top());
+    postfix_notation_.emplace_back(operators.top());
     operators.pop();
   }
 }
