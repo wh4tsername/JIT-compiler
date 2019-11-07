@@ -2,7 +2,7 @@
 
 cd ../cmake-build-debug
 
-cmake .. -DCMAKE_C_COMPILER=/opt/arm-gcc/bin/arm-linux-gnueabi-gcc -DCMAKE_CXX_COMPILER=/opt/arm-gcc/bin/arm-linux-gnueabi-g++
+# cmake .. -DCMAKE_C_COMPILER=/opt/arm-gcc/bin/arm-linux-gnueabi-gcc -DCMAKE_CXX_COMPILER=/opt/arm-gcc/bin/arm-linux-gnueabi-g++
 
 make
 
