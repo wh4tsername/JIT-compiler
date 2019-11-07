@@ -1,0 +1,100 @@
+#test 0
+( dec , 1 ) ( ( - 19 ) ) - a - ( - 20 ) + ( - kekus ) 
+#test 1
+( dec , 1 ) ( ( - 19 ) ) - a - ( - 20 ) + ( - kekus ) 
+#test 2
+( - 24 ) + ( 27 ) 
+#test 3
+( dec , 1 ) ( ( dec , 1 ) ( ( dec , 1 ) ( ( - 25 ) ) ) ) * AA * ( 17 ) * ( dec , 1 ) ( ( - kekus ) ) 
+#test 4
+15 - ( dec , 1 ) ( kekus ) 
+#test 5
+( sum , 4 ) ( lol , lol * a , ( - AA ) , 2 ) * ( - AA ) * ( - lol ) * ( sum , 4 ) ( 15 , ( - AA ) , ( - 21 ) , 9 ) 
+#test 6
+( - lol ) + ( 15 - a ) 
+#test 7
+( ( inc , 1 ) ( 1 ) * ( inc , 1 ) ( lol ) ) + ( inc , 1 ) ( ( a + ( - kekus ) ) * ( - a ) + ( - a ) ) 
+#test 8
+( ( - kekus ) + lol * ( - lol ) * ( - lol ) - ( sum , 4 ) ( ( - AA ) , ( - 20 ) , 13 , 7 ) * ( - 29 ) * ( - lol ) ) 
+#test 9
+( dec , 1 ) ( ( sum , 4 ) ( ( - 24 ) , kekus + ( - 1 ) , ( - 19 ) , 6 ) - kekus + ( - a ) - ( - AA ) ) 
+#test 10
+( dec , 1 ) ( ( ( ( - 3 ) + ( inc , 1 ) ( ( - a ) ) ) + ( dec , 1 ) ( ( sum , 4 ) ( 25 , ( 28 ) , AA , 3 ) ) ) ) 
+#test 11
+lol + ( - AA ) + ( inc , 1 ) ( ( 5 ) + ( - AA ) ) 
+#test 12
+( 7 ) * ( - AA ) 
+#test 13
+( - 4 ) * ( - AA ) 
+#test 14
+( inc , 1 ) ( ( dec , 1 ) ( lol ) + ( dec , 1 ) ( 20 ) ) 
+#test 15
+( dec , 1 ) ( ( a + ( - AA ) - ( dec , 1 ) ( 10 ) ) ) 
+#test 16
+( - AA ) + AA * ( - AA ) * ( ( - 22 ) - AA * ( - 4 ) ) 
+#test 17
+17 + a - ( - 3 ) + ( ( ( - 6 ) - ( - 6 ) ) + ( - AA ) + ( - 20 ) ) 
+#test 18
+( dec , 1 ) ( ( dec , 1 ) ( ( ( ( ( 19 ) - ( 5 ) ) - ( dec , 1 ) ( ( - lol ) ) ) + ( ( 19 ) * ( - 0 ) ) + ( dec , 1 ) ( 7 ) ) ) ) 
+#test 19
+( sum , 4 ) ( ( sum , 4 ) ( ( lol - ( - 13 ) ) , ( 8 ) * ( inc , 1 ) ( AA ) , ( 8 ) , 0 ) , ( sum , 4 ) ( ( inc , 1 ) ( ( - 1 ) * AA ) , ( - kekus ) * ( - lol ) * ( - lol ) , ( - lol ) , 7 ) , 11 , 2 ) 
+#test 20
+( inc , 1 ) ( kekus + ( - 9 ) ) 
+#test 21
+( inc , 1 ) ( ( dec , 1 ) ( ( - lol ) + kekus ) ) - ( ( - kekus ) - ( 20 ) - ( dec , 1 ) ( AA ) ) 
+#test 22
+( inc , 1 ) ( ( - AA ) ) 
+#test 23
+( dec , 1 ) ( ( sum , 4 ) ( ( - AA ) , ( - AA ) + ( - 28 ) , 16 , 9 ) ) 
+#test 24
+( ( 5 ) - a ) + ( inc , 1 ) ( lol * ( - 8 ) ) 
+#test 25
+( sum , 4 ) ( ( - lol ) , ( - 2 ) + ( - 6 ) , ( - kekus ) , 8 ) 
+#test 26
+( sum , 4 ) ( ( dec , 1 ) ( ( - 9 ) + ( - a ) + ( - lol ) ) , ( dec , 1 ) ( ( - 17 ) ) * ( ( - 23 ) - ( sum , 4 ) ( ( - kekus ) , ( - 0 ) , 1 , 2 ) ) , 12 , 1 ) 
+#test 27
+( sum , 4 ) ( ( ( dec , 1 ) ( AA ) * ( - AA ) * 9 ) , ( inc , 1 ) ( ( sum , 4 ) ( ( 28 ) , ( 11 ) , a , 6 ) + ( - 28 ) + ( - 24 ) ) , ( - AA ) , 2 ) 
+#test 28
+( ( - lol ) - ( ( - AA ) - ( - kekus ) ) ) 
+#test 29
+( - 9 ) + ( - 8 ) * ( - AA ) * ( - kekus ) + lol + ( - a ) + ( - 2 ) 
+#test 30
+( ( dec , 1 ) ( ( - lol ) ) + ( ( - AA ) - 7 + 25 ) ) 
+#test 31
+( dec , 1 ) ( ( - 12 ) + ( - 1 ) - ( 22 ) ) - ( dec , 1 ) ( ( ( - lol ) - kekus * ( - lol ) ) ) 
+#test 32
+( sum , 4 ) ( ( 20 + ( - 7 ) - lol * ( ( - 21 ) - lol ) ) , ( ( - 1 ) + ( - 4 ) ) + ( 21 ) + ( kekus - a ) , 2 , 3 ) 
+#test 33
+( 14 ) - a * ( inc , 1 ) ( ( sum , 4 ) ( ( 28 ) , AA , ( 3 ) , 6 ) ) 
+#test 34
+( dec , 1 ) ( ( ( sum , 4 ) ( ( 15 ) , ( - 27 ) , ( - lol ) , 9 ) * ( - 26 ) + ( - 2 ) ) * ( dec , 1 ) ( AA ) + ( sum , 4 ) ( lol , ( sum , 4 ) ( ( - 12 ) , ( - 24 ) , ( - lol ) , 6 ) , ( - 29 ) , 9 ) ) 
+#test 35
+( - AA ) * ( dec , 1 ) ( ( - 24 ) ) - ( - AA ) + ( inc , 1 ) ( ( - 27 ) ) 
+#test 36
+( ( sum , 4 ) ( ( - a ) , kekus , AA , 7 ) + ( inc , 1 ) ( 29 ) * ( sum , 4 ) ( ( - AA ) , ( - 5 ) , ( 2 ) , 7 ) * ( dec , 1 ) ( ( - 17 ) ) ) 
+#test 37
+kekus - ( - 7 ) + ( dec , 1 ) ( 3 * ( - 12 ) ) * ( dec , 1 ) ( ( lol + AA ) ) * ( AA * ( - 12 ) * kekus ) 
+#test 38
+( sum , 4 ) ( 12 , lol , ( - a ) , 8 ) 
+#test 39
+( sum , 4 ) ( ( - a ) , ( - AA ) , ( - kekus ) , 6 ) + ( kekus * ( - 15 ) ) + ( sum , 4 ) ( ( ( - 29 ) + a ) , ( inc , 1 ) ( ( - kekus ) ) , ( - 20 ) , 6 ) 
+#test 40
+28 * ( - 6 ) + ( - 7 ) - ( - 22 ) - ( inc , 1 ) ( ( dec , 1 ) ( ( inc , 1 ) ( kekus ) ) ) 
+#test 41
+( sum , 4 ) ( ( 9 + a * ( - 13 ) ) , ( sum , 4 ) ( ( inc , 1 ) ( 4 ) , ( 0 ) + ( - lol ) , ( - AA ) , 6 ) , ( - AA ) , 7 ) 
+#test 42
+( inc , 1 ) ( ( dec , 1 ) ( lol * ( sum , 4 ) ( ( - a ) , 29 , 12 , 8 ) - a - ( ( 15 ) - 17 ) ) ) 
+#test 43
+( ( sum , 4 ) ( ( 1 ) , ( 17 ) , 26 , 3 ) * ( sum , 4 ) ( AA , ( - kekus ) , 11 , 7 ) ) 
+#test 44
+( ( - lol ) - ( - lol ) ) * ( ( - a ) - ( AA - ( - AA ) ) ) - ( dec , 1 ) ( ( dec , 1 ) ( lol - ( - lol ) * ( dec , 1 ) ( ( 25 ) ) ) ) 
+#test 45
+( 21 + ( - lol ) ) 
+#test 46
+( ( dec , 1 ) ( 23 ) - 28 * a * 5 ) * ( sum , 4 ) ( ( sum , 4 ) ( ( - kekus ) , ( dec , 1 ) ( ( - lol ) ) , 18 , 6 ) , ( 10 ) + ( - AA ) + ( - 7 ) , kekus , 3 ) 
+#test 47
+lol + ( - AA ) 
+#test 48
+( - 15 ) + ( - a ) * ( inc , 1 ) ( kekus ) - kekus + AA - ( inc , 1 ) ( 21 - ( 26 ) ) 
+#test 49
+AA - ( - kekus ) - ( 3 - ( - a ) ) 
