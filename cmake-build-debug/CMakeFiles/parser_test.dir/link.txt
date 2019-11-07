@@ -1,0 +1,1 @@
+/opt/arm-gcc/bin/arm-linux-gnueabi-g++   -marm -g  -rdynamic CMakeFiles/parser_test.dir/parser/parser.cpp.o CMakeFiles/parser_test.dir/arm_compiler/arm_compiler.cpp.o CMakeFiles/parser_test.dir/parser_test/parser_test.cpp.o  -o parser_test 
