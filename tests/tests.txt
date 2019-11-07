@@ -1,0 +1,350 @@
+#test 0
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+dec((-19))-a-(-20)+(-kekus)
+-1
+
+#test 1
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+dec((-19))-a-(-20)+(-kekus)
+-1
+
+#test 2
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+(-24)+(27)
+3
+
+#test 3
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+dec(dec(dec((-25))))*AA*(17)*dec((-kekus))
+111384
+
+#test 4
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+15-dec(kekus)
+16
+
+#test 5
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+sum(AA, dec(a), (6), AA)*((-7)+(-a))*(-15)-23
+56857
+
+#test 6
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+(-lol)+(15-a)
+15
+
+#test 7
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+(inc(1)*inc(lol))+inc((a+(-kekus))*(-a)+(-a))
+-1
+
+#test 8
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+(-kekus)+lol*(-lol)*(-lol)-sum((-13), (-AA), (10), 3)*(-20)*(-4)
+18719
+
+#test 9
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+dec(sum((13), ((14)+(19)), 5, (-lol))-inc((-3)-(15)))
+68
+
+#test 10
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+dec((((-3)+inc((-a)))+dec(sum(2, (-AA), (27), (-6)))))
+-216
+
+#test 11
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+lol+(-AA)+inc((5)+(-AA))
+-463
+
+#test 12
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+(7)*(-AA)
+-1638
+
+#test 13
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+(-4)*(-AA)
+936
+
+#test 14
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+inc(dec(lol)+dec(20))
+18
+
+#test 15
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+dec((a+(-AA)-dec(10)))
+-243
+
+#test 16
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+(-AA)+AA*(-AA)*((-22)-AA*(-4))
+-50047218
+
+#test 17
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+17+a-(-3)+(((-6)-(-6))+(-AA)+(-20))
+-233
+
+#test 18
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+dec(dec(((((19)-(5))-dec((-lol)))+((19)*(-0))+dec(7))))
+18
+
+#test 19
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+sum(inc(inc((-AA))*((-lol)*(-lol))), ((-AA)*sum(lol, (-kekus), AA, (-kekus))-(-13)-kekus-(-a)), 0, (-kekus))
+-54740
+
+#test 20
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+inc(kekus+(-9))
+-8
+
+#test 21
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+inc(dec((-lol)+kekus))-((-kekus)-(20)-dec(AA))
+254
+
+#test 22
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+inc((-AA))
+-233
+
+#test 23
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+dec(sum((-AA), 26*(14), (-3), (19)))
+145
+
+#test 24
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+((5)-a)+inc(lol*(-8))
+13
+
+#test 25
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+sum(lol, (-lol)-(-a), (-16), AA)
+219
+
+#test 26
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+sum((-2)*lol-dec((-14)), (-kekus)-(-a)*inc(dec(23)), dec((-17))-(-23)-lol, (23))
+69
+
+#test 27
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+sum(inc(9)*(-25)-(-a), (-28)+(-24)-inc((AA*a)), dec((-28))*dec((11)), AA)
+-592
+
+#test 28
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+((-lol)-((-AA)-(-kekus)))
+235
+
+#test 29
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+(-9)+(-8)*(-AA)*(-kekus)+lol+(-a)+(-2)
+-13
+
+#test 30
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+(dec((-lol))+((-AA)-7+25))
+-216
+
+#test 31
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+dec((-12)+(-1)-(22))-dec(((-lol)-kekus*(-lol)))
+-36
+
+#test 32
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+sum((sum(13, (-17), (16), AA)*(-26)-(-5)*3), sum((18), (-7), (-1), 23)+dec((kekus-(-a))), 2, 11)
+-6335
+
+#test 33
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+(14)-a*inc(sum((-24), (-AA), (-18), (-kekus)))
+289
+
+#test 34
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+dec(((sum((-a), 17, (-a), (-25))*(-lol)-a)*sum(lol, (-29), kekus, AA)-((-12)-((-10)*(-4)))))
+-2193
+
+#test 35
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+(-AA)*dec((-24))-(-AA)+inc((-27))
+6058
+
+#test 36
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+sum(AA, (-19), (-22), (-0))+16+a*(-AA)+kekus-(0)*(1)
+-25
+
+#test 37
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+kekus-(-7)+dec(3*(-12))*dec((lol+AA))*(AA*(-12)*kekus)
+7
+
+#test 38
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+sum((-a), (-AA), a, AA)
+0
+
+#test 39
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+(sum(lol, (-15), (-11), kekus)+inc(kekus)+inc(lol)-(26+(-29)))
+-23
+
+#test 40
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+28*(-6)+(-7)-(-22)-inc(dec(inc(kekus)))
+-154
+
+#test 41
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+sum(kekus-sum((-lol), (-9), (-kekus), (-20)), inc((-13)-(3)+a), kekus-(1)+kekus, (-21))
+-8
+
+#test 42
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+inc(dec((lol*sum((-23), (9), (-AA), (-kekus))-inc(sum((-29), (13), 14, 0)))))
+249
+
+#test 43
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+sum((-26), (-kekus), 21, (27))*inc((21))
+484
+
+#test 44
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+((-lol)-(-lol))*((-a)-(AA-(-AA)))-dec(dec(lol-(-lol)*dec((25))))
+27
+
+#test 45
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+(21+(-lol))
+22
+
+#test 46
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+(dec(23)-28*a*5)*sum(sum((-26), (-kekus)-(-0), (-23), 17), (-kekus)-dec(a), (-AA)*(19)-(11), (-28))
+533006
+
+#test 47
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+lol+(-AA)
+-235
+
+#test 48
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+(-15)+(-a)*inc(kekus)-kekus+AA-inc(21-(26))
+222
+
+#test 49
+.vars
+a=1 AA=234 lol=-1 kekus=0
+.expression
+AA-(-kekus)-(3-(-a))
+230
+
