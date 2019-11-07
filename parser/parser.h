@@ -3,6 +3,7 @@
 #include <stack>
 #include <string>
 #include <vector>
+#include <iostream>
 
 namespace JIT_COMPILER::parser {
 enum struct Operation {
@@ -24,12 +25,16 @@ struct Token {
   int32_t number_;
 };
 
+class ParserTest;
+
 class Parser {
  public:
   std::vector<Token> Parse(const std::string& expression);
 
+  friend ParserTest;
+
  private:
-  size_t GetOperationPriority(const Operation& operation);
+  static size_t GetOperationPriority(const Operation& operation);
 
   void Split();
 
@@ -38,5 +43,10 @@ class Parser {
   std::string expression_;
   std::vector<Token> tokens_;
   std::vector<Token> postfix_notation_;
+};
+
+class ParserTest {
+ public:
+  static void Test(Parser& parser, const std::string& test);
 };
 }  // namespace JIT_COMPILER::parser
