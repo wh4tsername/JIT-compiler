@@ -1,4 +1,5 @@
 #!/bin/bash
+rm -f log.txt
 
 cd ../cmake-build-debug
 
@@ -23,6 +24,17 @@ do
 	if cmp -s output.txt program_output.txt ; then
  		echo "#test $i OK"
 	else
-		echo "#test $i WA" && break
+		echo -e "test:\n" >> log.txt
+    	cat input.txt >> log.txt
+    	echo -e "answer:\n" >> log.txt
+    	cat output.txt >> log.txt
+    	echo -e "program output:\n" >> log.txt
+    	cat program_output.txt >> log.txt
+    	rm input.txt
+    	echo "#test $i WA" && break
 	fi
 done
+
+rm input.txt
+rm output.txt
+rm program_output.txt
