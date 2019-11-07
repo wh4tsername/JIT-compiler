@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wasd/github/advanced1/arm_compiler/arm_compiler.cpp
+arm_compiler.h
+/home/wasd/github/advanced1/arm_compiler/arm_compiler.h
+
+/home/wasd/github/advanced1/arm_compiler/arm_compiler.h
+unordered_map
+-
+../parser/parser.h
+/home/wasd/github/advanced1/parser/parser.h
+
+/home/wasd/github/advanced1/parser/parser.cpp
+parser.h
+/home/wasd/github/advanced1/parser/parser.h
+
+/home/wasd/github/advanced1/parser/parser.h
+stack
+-
+string
+-
+vector
+-
+iostream
+-
+

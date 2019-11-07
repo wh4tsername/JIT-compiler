@@ -1,0 +1,4 @@
+/home/wasd/github/advanced1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/wasd/github/advanced1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/wasd/github/advanced1/cmake-build-debug/CMakeFiles/JIT_COMPILER.dir
+/home/wasd/github/advanced1/cmake-build-debug/CMakeFiles/parser_test.dir

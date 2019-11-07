@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="JIT_COMPILER"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/wasd/github/advanced1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/wasd/github/advanced1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/wasd/github/advanced1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="JIT_COMPILER">
+				<Option output="/home/wasd/github/advanced1/cmake-build-debug/JIT_COMPILER" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wasd/github/advanced1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/../../../../arm-linux-gnueabi/include/c++/7.3.1"/>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/../../../../arm-linux-gnueabi/include/c++/7.3.1/arm-linux-gnueabi/."/>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/../../../../arm-linux-gnueabi/include/c++/7.3.1/backward"/>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/include"/>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/include-fixed"/>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/../../../../arm-linux-gnueabi/include"/>
+					<Add directory="/opt/arm-gcc/bin/../arm-linux-gnueabi/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 JIT_COMPILER"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="JIT_COMPILER/fast">
+				<Option output="/home/wasd/github/advanced1/cmake-build-debug/JIT_COMPILER" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wasd/github/advanced1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/../../../../arm-linux-gnueabi/include/c++/7.3.1"/>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/../../../../arm-linux-gnueabi/include/c++/7.3.1/arm-linux-gnueabi/."/>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/../../../../arm-linux-gnueabi/include/c++/7.3.1/backward"/>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/include"/>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/include-fixed"/>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/../../../../arm-linux-gnueabi/include"/>
+					<Add directory="/opt/arm-gcc/bin/../arm-linux-gnueabi/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 JIT_COMPILER/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="parser_test">
+				<Option output="/home/wasd/github/advanced1/cmake-build-debug/parser_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wasd/github/advanced1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/../../../../arm-linux-gnueabi/include/c++/7.3.1"/>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/../../../../arm-linux-gnueabi/include/c++/7.3.1/arm-linux-gnueabi/."/>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/../../../../arm-linux-gnueabi/include/c++/7.3.1/backward"/>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/include"/>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/include-fixed"/>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/../../../../arm-linux-gnueabi/include"/>
+					<Add directory="/opt/arm-gcc/bin/../arm-linux-gnueabi/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 parser_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="parser_test/fast">
+				<Option output="/home/wasd/github/advanced1/cmake-build-debug/parser_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wasd/github/advanced1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/../../../../arm-linux-gnueabi/include/c++/7.3.1"/>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/../../../../arm-linux-gnueabi/include/c++/7.3.1/arm-linux-gnueabi/."/>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/../../../../arm-linux-gnueabi/include/c++/7.3.1/backward"/>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/include"/>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/include-fixed"/>
+					<Add directory="/opt/arm-gcc/bin/../lib/gcc/arm-linux-gnueabi/7.3.1/../../../../arm-linux-gnueabi/include"/>
+					<Add directory="/opt/arm-gcc/bin/../arm-linux-gnueabi/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 parser_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wasd/github/advanced1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/wasd/github/advanced1/arm_compiler/arm_compiler.cpp">
+			<Option target="JIT_COMPILER"/>
+			<Option target="parser_test"/>
+		</Unit>
+		<Unit filename="/home/wasd/github/advanced1/arm_compiler/arm_compiler.h">
+			<Option target="JIT_COMPILER"/>
+			<Option target="parser_test"/>
+		</Unit>
+		<Unit filename="/home/wasd/github/advanced1/main.c">
+			<Option target="JIT_COMPILER"/>
+		</Unit>
+		<Unit filename="/home/wasd/github/advanced1/parser/parser.cpp">
+			<Option target="JIT_COMPILER"/>
+			<Option target="parser_test"/>
+		</Unit>
+		<Unit filename="/home/wasd/github/advanced1/parser/parser.h">
+			<Option target="JIT_COMPILER"/>
+			<Option target="parser_test"/>
+		</Unit>
+		<Unit filename="/home/wasd/github/advanced1/parser_test/parser_test.cpp">
+			<Option target="parser_test"/>
+		</Unit>
+		<Unit filename="/home/wasd/github/advanced1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
